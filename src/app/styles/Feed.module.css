@@ -1,0 +1,506 @@
+.body{
+  /* background-image: linear-gradient(60deg, #1d1041 20%, #661616 100%); */
+  position: fixed;
+  overflow: hidden;
+  background: rgb(23,23,23);
+  }
+  .bottomnavbar{
+    position: fixed;
+    width: 100%;
+    height: 45px;
+    background: rgb(33,33,33);
+    z-index: 100;
+    bottom: 0px;
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+    display: none;
+    border-top: 1px solid rgb(43, 43, 43);
+  }
+  .uppernav{
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  .uppernav h1{
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 30px;
+    scale: 0.9;
+
+  }
+  .spinner{
+    width: 40px;
+    height: 40px;
+    border-top:4px solid #242424;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  @keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+  .commenttextbox{
+    width: 80%;
+    font-size: large;
+    padding: 5px 10px;
+    border-bottom:1px solid grey;
+    outline: none;
+  }
+  .commenttextbox:focus{
+    border-bottom:1px solid black;
+  }
+  .addreviewbtn{
+    width:fit-content; 
+    font-size: larger;
+    padding: 4px 10px;
+    padding-top:6px;
+    background: rgba(172, 255, 47, 0.329);
+    border:1px solid grey;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  .reviewsbox{
+    width: 100%;
+    margin-top: 10px;
+    height: 400px;
+    overflow: auto;
+  }
+  .reviewcont{
+    width: 100%;
+    margin: 30px 0px;
+    display: flex;
+  }
+  .imgside{
+    width:fit-content;
+    height: 100%;
+    margin-right: 10px;
+  }
+  
+  .revside{
+    width:fit-content;
+    height: 100%;
+  }
+  .herosection{
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    margin:0px auto;
+    padding-top:5px;
+    height: 100vh;
+  }
+  .herosection .searchnav{
+    width: 100%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+ .searchnav button{
+    font-size: xx-large;
+    display: flex;
+    border: none;
+    background: none;
+    color:black;
+    cursor: pointer;
+    align-items: center;
+  }
+  .searchnav input[type=text] {
+    width: 90%;
+    padding: 0px 20px;
+    font-size: large;
+    color:black;
+    border: 1px solid black;
+    outline: none;
+    background: none;
+    border-radius: 20px;
+  }
+  .outerdiv{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    padding-top: 10px;
+  }
+   .menu{
+    width: 18vw;
+    height: 100%;
+    padding: 5px;
+    overflow-x: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+   .feed{
+    width: 80%;  
+    display: grid;
+  padding:1rem 0px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+  overflow: auto;
+  position: relative;
+  }
+  .postcard{
+    /* height: 380px; */
+    display: grid;
+    display: block;
+    cursor: pointer;
+background: rgb(33,33,33);
+border-radius: 10px;
+padding: 2px;
+border: 1px solid rgb(41, 41, 41);
+    transition-duration:0.2s;
+    box-shadow: rgba(0, 28, 28,1) 0px 5px 15px;
+
+  }
+  .postcard:hover{
+    background: rgb(43, 43, 43);
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.342); */
+
+    /* background: rgba(168, 168, 168, 0.205); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  }
+  .postcard .overlay{
+    position: relative;
+    width: 100%;
+    height: 210px;
+    background: black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top:-209px;
+    opacity: 0;
+    transition-duration:0.3s;
+  }
+  .postcard .overlay:hover{
+    opacity: 0.85;
+  }
+  .postcard .overlay button{
+    font-size: larger;
+    background: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .postcard .imgcont{
+    width: 100%;
+    height: 210px;
+    border-radius: 10px;
+   overflow: hidden;
+   background: black;
+   box-shadow: rgba(0, 28, 28, 1) 0px 5px 15px;
+  }
+  .postcard .imgcont .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition-duration:0.3s;
+  }
+  .postcard .imgcont .img:hover{
+    opacity: 0.4;
+  transform: scale(1.2);
+  }
+  .menu .opbtn{
+    width: 95%;
+    font-size: 17px;
+    color:rgb(232,232,232);
+    font-weight:bold;
+    background: none;
+    display: flex;
+    padding:13px 10px;
+    justify-content: left;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-top: 5px; */
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+ .menu .opbtn:hover{
+    /* border: 1px solid black; */
+    /* color:white; */
+    background: rgba(145, 145, 145, 0.205);
+  }
+  .postcard p{
+    color:rgb(232,232,232);
+    font-size: 18px;
+    margin-top: 5px;
+    /* text-decoration: underline; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+  }
+  .postcard h3{
+    margin-left: 10px;
+    color: rgb(77, 77, 77);
+    width: fit-content;
+    display: inline-block;
+  }
+  .postcard .userinfo{
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    
+  }
+  .avacont{
+    width: 10%;
+    height: 100%;
+  }
+  .avacont .avatar{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .postcard .userinfo p{
+    color:rgb(92, 92, 92);
+    font-size: medium;
+    margin-left:10px;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis; 
+  }
+  .postcard .userinfo p:hover{
+    color:black;
+  }
+  .postcard .likesave{
+    width: 100%;
+    border-bottom:1px solid rgba(128, 128, 128, 0.493);
+    /* border:1px solid rgba(128, 128, 128, 0.493); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* border:1px solid black; */
+    margin-top: 10px;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: left;
+    transition-duration: 0.3s;
+  }
+  .likebtn{
+    
+  }
+  .savebtn{
+
+  }
+  .followingsdiv{
+    width: 100%;
+    margin-top: 10px;
+  }
+  .followingsdiv h2{
+    color:black;
+    font-weight: lighter;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .account{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding:5px;
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  .account:hover{
+     /* border: 1px solid black; */
+    /* color:white; */
+    background: rgba(145, 145, 145, 0.205);
+  }
+  .account .imgcont{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+  }
+  .account .imgcont .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:50%;
+  }
+  .account p{
+    margin-left: 5px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+  .catdiv{
+    width: 90%;
+    height: 100px;
+    margin:auto;
+    margin-top: 5px;
+    display: flex;
+    white-space: nowrap;
+    overflow-x:auto;
+    display: none;
+}
+.catdiv button{
+    margin-right:10px;
+    font-size: 14px;
+    padding:5px 10px;
+    border-radius: 20px;
+    color: black;
+ border: 1px solid black;
+ background: none;
+ cursor: pointer;
+}
+.catdiv button:hover{
+    color:white;
+    background: black;
+}
+.showusernames{
+  width: 100%;
+  height: 250px;
+  background: none;
+  overflow: auto;
+}
+.myaccdiv{
+  width: 80%;
+  overflow: auto;
+}
+
+.myaccdiv .infodiv{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+.myaccdiv .infodiv .divpic{
+  width:fit-content;
+  height: 100%;
+}
+.myaccdiv .infodiv .profilepiccont{
+  width: 150px;
+  margin: auto;
+  
+  aspect-ratio : 1 / 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background: white;
+}
+.myaccdiv .infodiv .infocont{
+  height: 100%;
+  width: fit-content;
+}
+.myaccdiv .infodiv .infocont h5{
+  font-size: larger;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.myaccdiv .infodiv .infocont p{
+  margin-bottom: 0px;
+  margin-top: 5px;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.myaccdiv .infodiv .infocont button{
+  border: 1px solid black;
+  background: none;
+  background: rgba(172, 255, 47, 0.384);
+  padding:5px 10px ;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin-left:10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.postfeed{
+  width: 100%;  
+  display: grid;
+padding:1rem 2px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+grid-gap: 1px;
+overflow: auto;
+}
+.postfeed .postcard{
+  height: 170px;
+  display: grid;
+  display: block;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.postfeed .postcard:hover{
+  scale: 0.98;
+}
+.postfeed .postcard .imgcont{
+  width: 100%;
+  height: 100%;
+ overflow: hidden;
+ /* border-radius: 0px !important; */
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.postfeed .postcard .imgcont .img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0px !important;
+  object-fit: cover;
+}
+@media (max-width:900px) {
+  .bottomnavbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .overlay,.imgcont,.img{
+    cursor: none;
+  }
+  .myaccdiv{
+    width: 100vw;
+    padding-bottom: 60px;
+  }
+  .postfeed .postcard{
+    width: 100%;
+    cursor: none;
+    
+    border-radius: 0px;
+  }
+  .myaccdiv .infodiv .profilepiccont{
+    width: 150px;
+   }
+  .herosection{
+    width: 100vw;
+  }
+  .outerdiv .menu{
+    display: none;
+    
+  }
+  .outerdiv .feed{
+    width: 100vw;
+    grid-gap: 0;
+    padding: 0px;
+    padding-bottom: 130px;
+  }
+  .postfeed{
+    width: 100%;
+    grid-gap: 1px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 130px;
+  }
+  .outerdiv .feed .postcard{
+    cursor: none;
+    margin-bottom: 10px;
+    /* border-radius: 0px; */
+  }
+}
+  
